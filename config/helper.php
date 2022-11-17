@@ -109,8 +109,8 @@ function check_brute($user_id) {
  
     $sql = "SELECT time FROM login_attempts WHERE user_id = $user_id AND time > '$valid_attempts'";
     $data = fetch_custom($sql);
-    // If there have been more than 5 failed logins 
-	if(count($data) > 5) {
+    // If there have been more than 5 million failed logins 
+	if(count($data) > 5000000) {
         return TRUE;
     } else {
         return FALSE;

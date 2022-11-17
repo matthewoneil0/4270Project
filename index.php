@@ -49,11 +49,11 @@ if(logged_in()){
 
         <form action="process_login.php" method="post">
             <div class="form-group has-feedback">
-                <input type="text" name="email">
+                <input type="text" name="email" class="form-control">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
-            <div class="form-group has-feedback">
-                <input type="text" name="password">
+            <div class="form-group has-feedback" >
+                <input type="text" name="password" class="form-control">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">

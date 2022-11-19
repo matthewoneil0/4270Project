@@ -1,7 +1,7 @@
 <?php
 $server = "localhost";
-$username = "root";
-$password = "theroot123";
+$username = "";
+$password = "";
 $database = "progesh";
  
 // Create connection

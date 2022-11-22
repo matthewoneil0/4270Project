@@ -104,20 +104,16 @@ confirm_logged_in();
         </li>
         <li>
           <a href="#">
-            <i class="fa fa-circle"></i> <span>Menu 1</span>
+            <i class="fa fa-circle"></i> <span>File Options</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Sub Menu 1</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Sub Menu 2</a></li>
+            <li class="active"><a href="ufu/index.html"><i class="fa fa-circle-o"></i>Upload a File</a></li>
+            <li><a href="ufu/search.php"><i class="fa fa-circle-o"></i>Search for a File</a></li>
           </ul>
-
-          <a href="ufu/index.html">
-            <i class="fa fa-dashboard"></i> <span>Upload a File</span>
-          </a>
-
+        </li>
         </li>
       </ul>
     </section>

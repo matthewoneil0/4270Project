@@ -17,8 +17,8 @@
 	else {
 	*/
 		$localhost = "localhost";
-		$username = "";
-		$password = "";
+		$username = "root";
+		$password = "theroot123";
 		$dbname = "progesh";
 		
 		$conn = mysqli_connect($localhost,$username,$password,$dbname);

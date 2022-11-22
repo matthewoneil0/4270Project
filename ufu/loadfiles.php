@@ -4,8 +4,8 @@
 </body>
 <?php
 	$localhost = "localhost";
-	$username = "";
-	$password = "";
+	$username = "root";
+	$password = "theroot123";
 	$dbname = "progesh";
 	
 	$conn = mysqli_connect($localhost,$username,$password,$dbname);
@@ -16,9 +16,13 @@
 	$sql = $conn->prepare("select * from files");
 	$sql->execute();
 	$res = $sql->get_result();
+	
+	print("<h1>Uploaded Database Files");
+	print("<table border = \"1\">");
+	print("<tr><th>File Name</th></tr>");
 
-	print("<table>");
 	while($row = $res->fetch_assoc()) {
 		print("<tr><td><a href='download.php?path=uploads/" . $row['title'] . "'>" . $row['title'] . "</a></td></tr>");
 	}
+	print("</table>");
 ?>

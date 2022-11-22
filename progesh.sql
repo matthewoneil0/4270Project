@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`) VALUES
-(1, 'Progesh', 'Subba', 'admin@admin.com', '21232f297a57a5a743894a0e4a801fc3');
+(1, 'Progesh', 'Subba', 'admin@admin.com', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -74,3 +74,10 @@ ALTER TABLE `user`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+create table `files` (
+	`file_id` int auto_increment primary key,
+	`file` blob,
+	`title` varchar(100),
+	`path` varchar(100)
+)

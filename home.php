@@ -113,6 +113,11 @@ confirm_logged_in();
             <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Sub Menu 1</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Sub Menu 2</a></li>
           </ul>
+
+          <a href="ufu/index.html">
+            <i class="fa fa-dashboard"></i> <span>Upload a File</span>
+          </a>
+
         </li>
       </ul>
     </section>

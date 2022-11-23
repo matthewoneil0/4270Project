@@ -6,10 +6,10 @@
 </body>
 
 <?php
+	/*
 	$maxSize = 100;
 	$minSize = 1;
 
-	/*
 	$file = $_FILES["file"]["name"];
 	$ext = pathinfo($file, PATHINFO_EXTENSION);
 

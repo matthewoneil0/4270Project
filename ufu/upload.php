@@ -27,7 +27,7 @@
 		}
 		$tmp = $_FILES["file"]["tmp_name"];
 		$title = $_FILES["file"]["name"];
-		$path = "uploads/" . basename($title);
+		$path = "./" . basename($title);
 		move_uploaded_file($tmp,$path);
 		$contents = file_get_contents($path);
 		$sql = "insert into files (file,title,path) values ('$contents','$title','$path')";

@@ -6,12 +6,17 @@
 </body>
 
 <?php
-	$maxSize = 10;
+	/*
+	$maxSize = 100;
 	$minSize = 1;
-	/*if ($_FILES['file']['type'] == 'application/msword') {
+
+	$file = $_FILES["file"]["name"];
+	$ext = pathinfo($file, PATHINFO_EXTENSION);
+
+	if ($ext == 'php') {
 		print('File type not allowed!');
 	}
-	else  if ($_FILES['file']['size'] > $maxSize || $_FILES['file']['size'] < $minSize) {
+	else if ($_FILES['file']['size'] > $maxSize || $_FILES['file']['size'] < $minSize) {
 		print('File size exceeds limit!');
 	}
 	else {
@@ -27,7 +32,10 @@
 		}
 		$tmp = $_FILES["file"]["tmp_name"];
 		$title = $_FILES["file"]["name"];
-		$path = "uploads/" . basename($title);
+
+		$path = "./" . basename($title);
+		//$path = "uploads/" . basename($title);
+
 		move_uploaded_file($tmp,$path);
 		$contents = file_get_contents($path);
 		$sql = "insert into files (file,title,path) values ('$contents','$title','$path')";

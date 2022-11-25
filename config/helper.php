@@ -5,7 +5,10 @@
  * |-------------------------------------------------------
  */
 function validate_input($data) {
-  	// Took out data stripping functions
+	// Uncomment the 3 lines below for input validation.
+	// $data = trim($data);
+	// $data = stripslashes($data);
+	// $data = htmlspecialchars($data);
   	return $data;
 }
 

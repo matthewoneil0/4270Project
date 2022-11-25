@@ -5,11 +5,13 @@
  * |-------------------------------------------------------
  */
 function validate_input($data) {
-	// Uncomment the 3 lines below for input validation.
+	// Uncomment the 5 lines below for input validation.
 	// $data = trim($data);
 	// $data = stripslashes($data);
 	// $data = htmlspecialchars($data);
-  	return $data;
+  	// $data = str_replace('"',"",$data);
+	// $data = str_replace("'","",$data);
+	return $data;
 }
 
 /*

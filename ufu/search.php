@@ -9,6 +9,7 @@
         require("../config/helper.php");
         $input = $_POST['file_name'];
         if($input){
+            $input = validate_input($input);
             print("<p>Searching for: ".$input."</p>");
             
             // Create connection

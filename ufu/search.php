@@ -22,45 +22,34 @@
             if (!$conn) {
                 die("Connection failed: " . $conn->connect_error);
             }
-            //"select \"".$input."\" from files";
-            //$sql = "select * from files where title = \"".$input."\"";
-            //"select * from files where title = '".$input."'";
-            $sql = "SELECT * FROM files WHERE file_id = $input";
-            $result = mysqli_query($conn, $sql);
-
-            //Check for results, if found, print
-            if ($result) {
-                //$result_array = array();
-                // while($row = mysqli_fetch_assoc($result)){
-                //     $result_array[] = $row;
-                // }
-                // $sql_prep = $conn->prepare($sql);
-                // $sql_prep->execute();
-                // $res = $sql_prep->get_result();
-                $fields_num = mysqli_num_fields($result);
-                print("<table border='1'><tr>");
-                for($i=0; $i<$fields_num; $i++)
-                {
-                    $field = mysqli_fetch_field($result);
-                    print("<td>".($field->name)."</td>");
-                } 
-                print("</tr>");
-                while($row = $result->fetch_assoc()) {
-                    
-                    print("<tr>");
-                    foreach($row as $cell)
-                        print("<td>".$cell."</td>");
-                    
-                    print("</tr>\n");
-                }	
-
-            }
             else{
-                print("<p>No results found with query $sql</p>");
+                $sql = "SELECT * FROM files WHERE file_id = $input";
+                $result = mysqli_query($conn, $sql);
+
+                if (mysqli_num_rows($result) > 0) {
+                    $fields_num = mysqli_num_fields($result);
+                    print("<table border='1'><tr>");
+                    for($i=0; $i<$fields_num; $i++)
+                    {
+                        $field = mysqli_fetch_field($result);
+                        print("<td>".($field->name)."</td>");
+                    } 
+                    print("</tr>");
+                    while($row = $result->fetch_assoc()) {
+                        
+                        print("<tr>");
+                        foreach($row as $cell)
+                            print("<td>".$cell."</td>");
+                        
+                        print("</tr>\n");
+                    }	
+
+                }
+                else{
+                    print("<p>No results found with query $sql</p>");
+                }
             }
-            print($conn->error);
         }
-        print("sql statement: ".$sql."\n");
         mysqli_close($conn);
     
 	?>
